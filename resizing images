@@ -1,0 +1,13 @@
+stylized_video_frames/480p/bear_stylized/00000.jpg
+stylized_video_frames/480p/bear_stylized_resized/00000.jpg
+
+
+
+convert -resize 854x480! stylized_video_frames/480p/bear_stylized/00000.jpg stylized_video_frames/480p/bear_stylized_resized/00000.jpg
+
+cd stylized_video_frames/480p/bear
+
+
+Resizing image
+
+mogrify -path bear_stylized_resized -resize 854x480! -format jpg *.jpg
