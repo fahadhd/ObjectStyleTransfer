@@ -1,13 +1,25 @@
 #include "globalmatting.h"
-
-// you can get the guided filter implementation
-// from https://github.com/atilimcetin/guided-filter
 #include "guidedfilter.h"
 
-int main()
-{
-    cv::Mat image = cv::imread("00069.jpg", CV_LOAD_IMAGE_COLOR);
-    cv::Mat trimap = cv::imread("00069.png", CV_LOAD_IMAGE_GRAYSCALE);
+using namespace std;
+
+
+string getFileName(int n){
+    if(n < 10){
+        return "0000" + std::to_string(n);
+    }
+    else{
+        return "000"+std::to_string(n);
+    }
+}
+
+int matting_helper(string fileName){
+    string image_path = "../video_frames/480p/car-turn/"+fileName+".jpg";
+    string tripmap_path = "../trimaps/480p/car-turn/"+fileName+".png";
+
+
+    cv::Mat image = cv::imread(image_path, CV_LOAD_IMAGE_COLOR);
+    cv::Mat trimap = cv::imread(tripmap_path, CV_LOAD_IMAGE_GRAYSCALE);
 
     // (optional) exploit the affinity of neighboring pixels to reduce the
     // size of the unknown region. please refer to the paper
@@ -28,7 +40,18 @@ int main()
                 alpha.at<uchar>(y, x) = 255;
         }
 
-    cv::imwrite("mat_test.png", alpha);
+    cv::imwrite("../alpha_mattings/480p/car-turn/"+fileName+".png", alpha);
+
+    return 0;
+
+}
+
+int main(){
+    //Create alpha mattings for all trimaps 00000-00081
+    // for(int i = 0; i <= 81; i++){
+    // matting_helper(getFileName(i));
+    // }
 
     return 0;
 }
+
