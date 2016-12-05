@@ -7,8 +7,8 @@ def create_trimap(mask,output_dir):
 	img = cv2.imread(mask, 0)
 	kernel = np.ones((5,5), np.uint8)
 
-	dilute = cv2.dilate(img, kernel, iterations =7)
-	erode = cv2.erode(img,kernel, iterations =7)
+	dilute = cv2.dilate(img, kernel, iterations =1)
+	erode = cv2.erode(img,kernel, iterations =6)
 
 	#Fills dilute color with gray and fills eroded inner section with white
 	for i in range(dilute.shape[0]):
@@ -31,13 +31,13 @@ def create_trimap(mask,output_dir):
 	cv2.imwrite(output_dir,dilute)
 
 	# # Testing
-	# cv2.imshow('image',dilute)
-	# cv2.waitKey(0)
-	# cv2.destroyAllWindows()
+	cv2.imshow('image',dilute)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
 
 def main():
 	#For single image
-	#create_trimap('Masks/480p/bvs/car-turn/00048.png','trimaps/480p/car-turn/00048.png')
+	create_trimap('Masks/480p/bvs/car-turn/00048.png','trimaps/480p/car-turn/00048.png')
 
 	#For whole directory
 	# for fn in os.listdir("Masks/480p/bvs/car-turn"):
