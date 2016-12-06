@@ -1,0 +1,12 @@
+th fast_neural_style.lua \
+  -model models/eccv16/starry_night.t7 \
+  -input_image images/content/chicago.jpg \
+  -output_image ObjectStyleTransfer/stylized_video_frames/out.png \
+  -gpu 0
+
+
+th fast_neural_style.lua \
+  -model models/eccv16/the_wave.t7 \
+  -input_dir ObjectStyleTransfer/video_frames/480p/car-turn \
+  -output_dir ObjectStyleTransfer/stylized_video_frames/480p/car_turn_stylized/ \
+  -gpu 0

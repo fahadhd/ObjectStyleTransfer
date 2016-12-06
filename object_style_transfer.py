@@ -51,19 +51,21 @@ def resize_images(width,height,image_folder,output_dir):
 
 
 def main():
-	original_dir = "video_frames/480p/blackswan/"
+	original_dir = "video_frames/480p/flamingo/"
 
-	stylized_dir = "stylized_video_frames/480p/blackswan-stylized/"
+	stylized_dir = "stylized_video_frames/480p/flamingo-stylized/"
 
-	output_dir = "object_style_transfers/480p/blackswan/"
+	#Make sure this directory is actually created
+	output_dir = "object_style_transfers/480p/flamingo/"
 
+	#IMPORTANT do not call this function twice or if there is a folder with the same output it creates
 	#Stylized images need to be resized to mask width and height prior to object style transfer
 	#Resizes stylized images in a directory to be the same width and height as mask
-	#resize_images(854,480,"stylized_video_frames/480p/blackswan-stylized","blackswan-stylized-resized")
+	# resize_images(854,480,"stylized_video_frames/480p/flamingo-stylized","flamingo-stylized-resized")
 
-	resized_dir = "stylized_video_frames/480p/blackswan-stylized-resized/"
+	resized_dir = "stylized_video_frames/480p/flamingo-stylized-resized/"
 
-	masks_dir = "Masks/480p/bvs/blackswan/"
+	masks_dir = "Masks/480p/bvs/flamingo/"
 
 	#object_style_transfer("00001",masks_dir,original_dir,resized_dir,output_dir)
 
