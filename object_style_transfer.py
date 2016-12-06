@@ -27,12 +27,12 @@ def object_style_transfer(img_name,masks_dir,original_dir,stylized_dir,output_di
 	object_stylized_img = cv2.bitwise_or(stylized_cropped,original_cropped)
 
 	#Saving image
-	#cv2.imwrite(output_dir+img_file,object_stylized_img)
+	cv2.imwrite(output_dir+img_file,object_stylized_img)
 
 	#Testing
-	cv2.imshow('image',object_stylized_img)
-	cv2.waitKey(0)
-	cv2.destroyAllWindows()
+	# cv2.imshow('image',object_stylized_img)
+	# cv2.waitKey(0)
+	# cv2.destroyAllWindows()
 
 
 
@@ -51,27 +51,27 @@ def resize_images(width,height,image_folder,output_dir):
 
 
 def main():
-	original_dir = "video_frames/480p/blackswan"
+	original_dir = "video_frames/480p/blackswan/"
 
-	stylized_dir = "stylized_video_frames/480p/blackswan-stylized"
+	stylized_dir = "stylized_video_frames/480p/blackswan-stylized/"
 
-	output_dir = "object_style_transfers/480p/blackswan"
+	output_dir = "object_style_transfers/480p/blackswan/"
 
 	#Stylized images need to be resized to mask width and height prior to object style transfer
 	#Resizes stylized images in a directory to be the same width and height as mask
 	#resize_images(854,480,"stylized_video_frames/480p/blackswan-stylized","blackswan-stylized-resized")
 
-	resized_dir = "stylized_video_frames/480p/blackswan-stylized-resized"
+	resized_dir = "stylized_video_frames/480p/blackswan-stylized-resized/"
 
-	masks_dir = "Masks/480p/bvs/blackswan"
+	masks_dir = "Masks/480p/bvs/blackswan/"
 
-	object_style_transfer('00000',masks_dir,original_dir,resized_dir,output_dir)
+	#object_style_transfer("00001",masks_dir,original_dir,resized_dir,output_dir)
 
 	#Loops through a directory of images, applies object style transfer, and saves results
-	# for fn in os.listdir(original_dir):
-	# 	if(fn.endswith(".jpg")):
-	# 		img_name = fn.rsplit('.', 1)[0]
-	# 		object_style_transfer(img_name,masks_dir,original_dir,resized_dir,output_dir)
+	for fn in os.listdir(original_dir):
+		if(fn.endswith(".jpg")):
+			img_name = fn.rsplit('.', 1)[0]
+			object_style_transfer(img_name,masks_dir,original_dir,resized_dir,output_dir)
 
 
 
