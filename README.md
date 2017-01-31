@@ -4,7 +4,7 @@
 
 Recomposing objects in images in the style of other images using opencv, torch, and the jcjohnson fast neural style library.
 
-#Alpha Pictures
+#Results
 
 ![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/video_frames/480p/blackswan/00000.jpg?raw=true)
 
