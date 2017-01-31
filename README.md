@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-Recomposing objects in images in the style of other images using opencv, torch, and the jcjohnson fast neural style library.
+Recomposing image foreground objects in the style of other images using opencv, torch, and the jcjohnson fast neural style library.
 
 #Results
 
