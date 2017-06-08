@@ -12,18 +12,15 @@ Recomposing image foreground objects in the style of other images using opencv, 
 
 ![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/object_style_transfers/480p/blackswan/00000.jpg?raw=true)
 
-![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/video_frames/480p/flamingo/00000.jpg?raw=true)
-
-![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/object_style_transfers/480p/flamingo/00000.jpg?raw=true)
-
 ![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/video_frames/480p/bear/00000.jpg?raw=true)
 
 ![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/object_style_transfers/480p/bear/00000.jpg?raw=true)
 
-
-
+![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/video_frames/480p/flamingo/00000.jpg?raw=true)
 
 ![alt tag](http://totallyhistory.com/wp-content/uploads/2012/12/composition-vii-1913.jpg)
+
+![alt tag](https://github.com/fahadhd/ObjectStyleTransfer/blob/master/object_style_transfers/480p/flamingo/00000.jpg?raw=true)
 
 
 
